@@ -1,0 +1,10 @@
+[user]
+	name = Nathan Walther
+[core]
+	editor = atom -w
+[alias]
+	ff = merge --ff-only
+	fpa = fetch --prune --all
+	st = status -sb
+[include]
+	path = ~/.gitconfig.local
