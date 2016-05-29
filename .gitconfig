@@ -4,6 +4,8 @@
 	editor = atom -w
 [credential]
 	helper = osxkeychain
+[push]
+	default = simple
 [alias]
 	ff = merge --ff-only
 	fpa = fetch --prune --all
@@ -17,4 +19,3 @@
 	rv = remote -v
 [include]
 	path = ~/.gitconfig.local
-
