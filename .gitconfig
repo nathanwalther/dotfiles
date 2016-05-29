@@ -2,9 +2,19 @@
 	name = Nathan Walther
 [core]
 	editor = atom -w
+[credential]
+	helper = osxkeychain
 [alias]
 	ff = merge --ff-only
 	fpa = fetch --prune --all
+	lg  = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30
+	lga = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30 --all
+	pop = stash pop --index --quiet
+	sh = show -s
 	st = status -sb
+	unstage = reset HEAD --
+	update = update-index --again
+	rv = remote -v
 [include]
 	path = ~/.gitconfig.local
+
