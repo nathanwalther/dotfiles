@@ -7,6 +7,10 @@ if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
        source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
 fi
 
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
 if [ "Running" != $(docker-machine status default 2>/dev/null) ]; then
        docker-machine start default
 fi
@@ -16,8 +20,6 @@ export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
 
 export NODE_ENV=development
-
-source ~/.git-completion.bash
 
 complete -C aws_completer aws
 
