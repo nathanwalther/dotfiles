@@ -2,6 +2,7 @@
 	name = Nathan Walther
 [core]
 	editor = atom -w
+	excludesfile = /Users/nwalther/.gitignore
 [credential]
 	helper = osxkeychain
 [push]
