@@ -13,5 +13,9 @@ fi
 
 export NODE_ENV=development
 
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
+export PATH=$PATH:/Users/nwalther/bin:/Users/nwalther/workspace/confluent/bin
+
 complete -C aws_completer aws
 
