@@ -1,22 +1,22 @@
 [user]
 	name = Nathan Walther
 [core]
-	editor = atom -w
+	editor = code --wait
 	excludesfile = /Users/nwalther/.gitignore
 [credential]
 	helper = osxkeychain
 [push]
-	default = simple
+	default = current
 [alias]
+	cm = commit -m
 	ff = merge --ff-only
 	fpa = fetch --prune --all
 	lg  = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30
 	lga = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30 --all
-	pop = stash pop --index --quiet
-	sh = show -s
-	st = status -sb
-	unstage = reset HEAD --
-	update = update-index --again
-	rv = remote -v
+	rlg = log --walk-reflogs --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset'
+	sh = show --no-patch
+	st = status --short --branch
+	rv = remote --verbose
 [include]
 	path = ~/.gitconfig.local
+
