@@ -28,3 +28,5 @@ export PKG_CONFIG_PATH=/usr/local/opt/libffi/lib/pkgconfig
 
 complete -C aws_completer aws
 
+source <(kubectl completion bash)
+
