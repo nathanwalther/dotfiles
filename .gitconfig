@@ -5,9 +5,8 @@
 	excludesfile = /Users/nwalther/.gitignore
 [credential]
 	helper = osxkeychain
-[push]
-	default = current
 [alias]
+	bra = branch --all
 	cm = commit -m
 	ff = merge --ff-only
 	fpa = fetch --prune --all
@@ -20,3 +19,7 @@
 [include]
 	path = ~/.gitconfig.local
 
+[advice]
+	detachedHead = false
+	statusHints = false
+	resolveConflict = false
