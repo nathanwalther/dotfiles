@@ -6,19 +6,17 @@
 [credential]
 	helper = osxkeychain
 [alias]
-	bra = branch --all
 	cm = commit -m
 	ff = merge --ff-only
 	fpa = fetch --prune --all
-	lg  = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30
-	lga = log --graph --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset' -n30 --all
-	rlg = log --walk-reflogs --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset'
+	logpretty = log --pretty=format:'%x09%Cblue%h%Creset %s %C(dim green)%an (%cr)%Creset%Cred%d%Creset'
+	lg  = logpretty --graph
+	lga = logpretty --graph --all
+	rlg = logpretty --walk-reflogs
 	sh = show --no-patch
 	st = status --short --branch
 	rv = remote --verbose
-[include]
-	path = ~/.gitconfig.local
-
+	rs = restore --staged
 [advice]
 	detachedHead = false
 	statusHints = false
