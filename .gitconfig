@@ -1,10 +1,13 @@
 [user]
 	name = Nathan Walther
+	# email is set in ~/.gitconfig-local
+
 [core]
-	editor = code --wait
-	excludesfile = /Users/nwalther/.gitignore
+	excludesfile = ~/.gitignore
+
 [credential]
 	helper = osxkeychain
+
 [alias]
 	cm = commit -m
 	ff = merge --ff-only
@@ -17,7 +20,15 @@
 	st = status --short --branch
 	rv = remote --verbose
 	rs = restore --staged
+
 [advice]
 	detachedHead = false
 	statusHints = false
 	resolveConflict = false
+
+[init]
+	defaultBranch = main
+
+[include]
+	path = ~/.gitconfig-local
+
